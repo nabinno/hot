@@ -1,5 +1,30 @@
-# Hot
+# Hot [![Build Status](https://travis-ci.com/nabinno/hot.svg)](https://travis-ci.com/nabinno/hot/builds)
 Hot is a build tool that provides tasks for creating, compiling, and testing Red projects, managing its dependencies, and more.
+
+## Installation
+```sh
+# MSDOS
+> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-msdos.exe -outf ~/.local/bin/hot.exe
+
+# Linux
+> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-linux -O ~/.local/bin/hot
+> chmod 744 ~/.local/bin/hot
+
+# Darwin
+> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-darwin -O ~/.local/bin/hot
+> chmod 744 ~/.local/bin/hot
+```
+
+## Getting Started
+```sh
+> hot cmd/install https://raw.githubusercontent.com/nabinno/mods/master/mods.red
+> hot help
+cmd/install
+cmd/uninstall
+mods/get
+mods/clean
+mods/require
+```
 
 ---
 
