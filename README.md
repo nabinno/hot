@@ -4,14 +4,14 @@ Hot is a build tool that provides tasks for creating, compiling, and testing Red
 ## Installation
 ```sh
 # MSDOS
-> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-msdos.exe -outf ~/.local/bin/hot.exe
+> wget https://github.com/nabinno/hot/releases/download/0.0.1/hot-msdos.exe -outf ~/.local/bin/hot.exe
 
 # Linux
-> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-linux -O ~/.local/bin/hot
+> wget https://github.com/nabinno/hot/releases/download/0.0.1/hot-linux -O ~/.local/bin/hot
 > chmod 744 ~/.local/bin/hot
 
 # Darwin
-> wget https://raw.githubusercontent.com/nabinno/hot/master/_build/hot-darwin -O ~/.local/bin/hot
+> wget https://github.com/nabinno/hot/releases/download/0.0.1/hot-darwin -O ~/.local/bin/hot
 > chmod 744 ~/.local/bin/hot
 ```
 
