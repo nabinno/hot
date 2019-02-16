@@ -1,6 +1,6 @@
 Red []
 
-CURRENT_CMD: to-block system/script/args
+CURRENT-CMD: to-block system/script/args
 HOTLIB-PATH: to-red-file rejoin [get-env either system/platform == 'Windows ["USERPROFILE"]["HOME"] %/.hot/]
 
 foreach file read HOTLIB-PATH [
@@ -22,13 +22,18 @@ cmd: context [
 ]
 
 help: does [
-    foreach [f _] to-block do cmd [
-        print to-string rejoin ["cmd/" f]
+    fn-name-rule: charset [#"a" - #"z" #"-"]
+    foreach [fn _] to-block do cmd [
+        if parse to-string fn [some fn-name-rule] [
+            print to-string rejoin ["cmd/" fn]
+        ]
     ]
     foreach file read HOTLIB-PATH [
-        c: replace to-string file ".red" ""
-        foreach [f _] to-block do to-word c [
-            print to-string rejoin [c "/" f]
+        ctx: replace to-string file ".red" ""
+        foreach [fn _] to-block do to-word ctx [
+            if parse to-string fn [some fn-name-rule] [
+                print to-string rejoin [ctx "/" fn]
+            ]
         ]
     ]
 ]
@@ -36,4 +41,4 @@ help: does [
 ;
 ; Main
 ;
-do CURRENT_CMD
+do CURRENT-CMD
