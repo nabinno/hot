@@ -2,6 +2,7 @@ Red []
 
 CURRENT-CMD: to-block system/script/args
 HOTLIB-PATH: to-red-file rejoin [get-env either system/platform == 'Windows ["USERPROFILE"]["HOME"] %/.hot/]
+unless exists? HOTLIB-PATH [make-dir/deep HOTLIB-PATH]
 
 foreach file read HOTLIB-PATH [
     do/args rejoin [HOTLIB-PATH file] system/options/path
